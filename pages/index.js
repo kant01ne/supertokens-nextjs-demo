@@ -1,7 +1,29 @@
+
+import {useEffect, useState} from "react";
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import {doesSessionExist} from 'supertokens-auth-react/recipe/session';
+import { signOut } from "supertokens-auth-react/recipe/emailpassword";
 
 export default function Home() {
+  const [hasSession, setHasSession] = useState(false);
+
+  async function logoutClicked() {
+    await signOut();
+    window.location.href = "/auth";
+  }
+  useEffect(() => {
+      if (doesSessionExist() === false) {
+          window.location.href = "/auth";
+      } else {
+        setHasSession(true);
+      }
+  }, [setHasSession]);
+
+  if (hasSession === false) {
+    return null;
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,12 +34,41 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
+          
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          You are sign in with SuperTokens!
+
         </p>
+
+        <div
+            style={{
+                display: "flex",
+                height: "70px",
+                alignItems: "center",
+                justifyContent: "flex-end",
+                paddingLeft: "75px",
+                paddingRight: "75px"
+            }}>
+
+            <div
+                onClick={logoutClicked}
+                style={{
+                    display: "flex",
+                    width: "116px",
+                    height: "42px",
+                    backgroundColor: "#000000",
+                    borderRadius: "10px",
+                    cursor: "pointer",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "#ffffff",
+                    fontWeight: "bold"
+                }}>
+                SIGN OUT
+            </div>
+        </div>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
