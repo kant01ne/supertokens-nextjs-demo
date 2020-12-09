@@ -1,16 +1,23 @@
-import Head from 'next/head'
-import { useEffect } from 'react'
+import Head from 'next/head';
+import React, { useEffect } from 'react';
 import 'regenerator-runtime/runtime';
-import styles from '../../styles/Home.module.css'
-import SuperTokens from 'supertokens-auth-react'
+import styles from '../../styles/Home.module.css';
+import dynamic from 'next/dynamic';
+import SuperTokens  from 'supertokens-auth-react';
+
+const SuperTokensComponentNoSSR = dynamic(() => import('supertokens-auth-react').then(mod => {
+  return () => mod.getRoutingComponent() || null;
+}), {
+  ssr: false
+});
 
 export default function Auth() {
-  useEffect(async () => {
+  useEffect(() => {
     if (SuperTokens.canHandleRoute() === false) {
       window.location.href = "/";
     }
   }, []);
-  
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,7 +26,7 @@ export default function Auth() {
       </Head>
 
       <main className={styles.main}>
-          {SuperTokens.getRoutingComponent()}
+          <SuperTokensComponentNoSSR />
       </main>
 
     </div>
