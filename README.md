@@ -8,7 +8,7 @@ Learn how to build and deploy a NextJS application protected by SuperTokens in 1
 yarn create next-app
 ```
 
-[!yarn create next-app](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/yarn-create-next-app?raw=true)
+![yarn create next-app](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/yarn-create-next-app.png?raw=true)
 
 ```
 cd supertokens-nextjs-demo
@@ -69,7 +69,7 @@ export default MyApp;
 
 Create an `auth` folder under `pages` and create a [[...path]].js file to render all SuperTokens components.
 
-[!Client side Tree](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/tree-client-side.png?raw=true)
+![Client side Tree](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/tree-client-side.png?raw=true)
 
 #### **`pages/auth/[[...path]].js`**
 ```js
@@ -249,7 +249,7 @@ export default function Home() {
 
 Similarly, create an `auth` folder under `pages/api` and create a [[...path]].js file
 
-[!Server side Tree](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/tree-server-side.png?raw=true)
+![Server side Tree](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/tree-server-side.png?raw=true)
 
 #### **`pages/api/[[...path]].js`**
 ```js
@@ -359,11 +359,11 @@ yarn dev
 
 Follow the [Deploying Your Next.js Project with Vercel guide](https://vercel.com/guides/deploying-nextjs-with-vercel#step-2:-deploying-your-next.js-project-with-vercel) to deploy on Vercel.
 
-[!Deploy with Vercel](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/deploy-with-vercel.png?raw=true)
+![Deploy with Vercel](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/deploy-with-vercel.png?raw=true)
 
 Once you have created your github repository and configured Vercel, you need to add the `PUBLIC_NEXT_APP_URL` and `APP_URL` to the environment variables.
 
-[!Project Settings](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/project-settings.png?raw=true)
+![Project Settings](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/project-settings.png?raw=true)
 
 Make sure to redeploy your application for the environment variables to be taken into account.
 
