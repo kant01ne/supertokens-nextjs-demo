@@ -376,7 +376,14 @@ Make sure to redeploy your application for the environment variables to be taken
 
 That's it!
 
-You now have a working NextJS application protected with SuperTokens authentication running in production
+You now have a working NextJS application protected with SuperTokens authentication running in production:
+
+![Demo Sign Up](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/demo-sign=up.png?raw=true)
+
+And after you have Sign up / Sign in: 
+
+![Demo Authenticated](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/demo-authenticated.png?raw=true)
+
 
 ## Use your own SuperTokens Instance 🐳
 
