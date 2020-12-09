@@ -361,13 +361,21 @@ Follow the [Deploying Your Next.js Project with Vercel guide](https://vercel.com
 
 ![Deploy with Vercel](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/deploy-with-vercel.png?raw=true)
 
+
 Once you have created your github repository and configured Vercel, you need to add the `PUBLIC_NEXT_APP_URL` and `APP_URL` to the environment variables.
 
+In your project setttings, go to "Environment Variables":
+
 ![Project Settings](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/project-settings.png?raw=true)
+
+Then create the following:
+
+![Environment Variables](https://raw.githubusercontent.com/NkxxkN/supertokens-nextjs-demo/main/assets/environment-variables.png?raw=true)
 
 Make sure to redeploy your application for the environment variables to be taken into account.
 
 That's it!
+
 You now have a working NextJS application protected with SuperTokens authentication running in production
 
 ## Use your own SuperTokens Instance 🐳
