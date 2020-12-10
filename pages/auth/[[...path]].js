@@ -12,23 +12,23 @@ const SuperTokensComponentNoSSR = dynamic(() => import('supertokens-auth-react')
 });
 
 export default function Auth() {
-  useEffect(() => {
-    if (SuperTokens.canHandleRoute() === false) {
-      window.location.href = "/";
-    }
-  }, []);
+    useEffect(() => {
+        if (SuperTokens.canHandleRoute() === false) {
+          window.location.href = "/";
+        }
+    }, []);
 
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <div className={styles.container}>
+          <Head>
+            <title>SuperTokens 💫, Open Source Alternative to Auth0</title>
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
 
-      <main className={styles.main}>
-          <SuperTokensComponentNoSSR />
-      </main>
+          <main className={styles.main}>
+              <SuperTokensComponentNoSSR />
+          </main>
 
-    </div>
-  )
+        </div>
+    );
 }

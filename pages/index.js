@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>SuperTokens 💫, Open Source Alternative to Auth0</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
